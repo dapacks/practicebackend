@@ -9,6 +9,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/start',function(req,res,next)
+{
+  console.log("this is the start page");
+})
+
 router.use('/api',require("./createUser")) 
 
 router.use('/api',require("./DisplayData")) 
