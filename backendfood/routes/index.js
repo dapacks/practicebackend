@@ -11,8 +11,9 @@ router.get('/', function(req, res, next) {
 
 router.get('/start',function(req,res,next)
 {
-  console.log("this is the start page");
+  res.render('start', { title: 'start' });
 })
+
 
 router.use('/api',require("./createUser")) 
 
