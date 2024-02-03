@@ -7,7 +7,7 @@ const mongoDB = async () => {
     await mongoose.connect(mongoURI);
     console.log('connected');
 
-    const collection = mongoose.connection.db.collection("category");
+    const collection = mongoose.connection.db.collection("food");
     const fetcheddata=await collection.find({}).toArray();
 
     
