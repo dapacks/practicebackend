@@ -7,10 +7,6 @@ var cors = require('cors'); // Import the 'cors' module
 
 // Use the 'cors' middleware
 app.use(cors());
-
-  app.options("*", (req, res) => {
-    res.status(200).send("Preflight request allowed");
-  });
 var createError = require('http-errors');
 
 var path = require('path');
