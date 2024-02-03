@@ -4,11 +4,11 @@ var cors = require('cors'); // Import the 'cors' module
 var app = express();
 
 // Use the 'cors' middleware
-app.use(cors({
-  origin: 'http://localhost:5173', // Replace with your frontend domain
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true, // Enable credentials (e.g., cookies)
-}));
+app.use(cors());
+app.use((req, res, next) => {
+  res.header({"Access-Control-Allow-Origin": "*"});
+  next();
+})
 var createError = require('http-errors');
 
 var path = require('path');
