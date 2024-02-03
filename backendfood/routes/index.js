@@ -13,14 +13,7 @@ router.get('/start',function(req,res,next)
 {
   res.render('start', { title: 'start' });
 })
-router.post('/fooditem', (req, res) => {
-  try {
-    res.send([global.food_items, global.foodCategory]);
-  } catch (error) {
-    console.error(error.message);
-    res.send("server error");
-  }
-});
+
 
 router.use('/api',require("./createUser")) 
 
