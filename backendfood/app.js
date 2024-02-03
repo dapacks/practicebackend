@@ -1,7 +1,8 @@
 var express = require('express');
-var cors = require('cors'); // Import the 'cors' module
+
 
 var app = express();
+var cors = require('cors'); // Import the 'cors' module
 
 // Use the 'cors' middleware
 app.use(cors());
