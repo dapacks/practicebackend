@@ -13,7 +13,7 @@ router.get('/start',function(req,res,next)
 {
   res.render('start', { title: 'start' });
 })
-app.post('/fooditem', (req, res) => {
+router.post('/fooditem', (req, res) => {
   try {
     res.send([global.food_items, global.foodCategory]);
   } catch (error) {
